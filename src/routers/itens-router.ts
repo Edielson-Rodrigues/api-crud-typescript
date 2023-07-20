@@ -1,6 +1,6 @@
 import express from 'express'
 import Item from '../models/item'
-import itensRepository from '../repositories/itensRepositoys'
+import itensRepository from '../repositories/itensRepository'
 
 // Criando verbos https para itens
 const itensRouter = express.Router();

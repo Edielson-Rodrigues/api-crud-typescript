@@ -19,12 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // Endpoint raiz 
 app.get('/', (req, res) => {
-    res.send('Bem-vindo!')
+    res.send('Bem-vindo!');
 });
 
 // Cors 
 app.use(cors({
-    origin: ['htpp://localhots:3000']//Permite que a porta 3000 acessa a api
+    origin: ['htpp://localhost:80']//Permite que a porta 3000 acessa a api
 }));
 
 // Rotas 
@@ -38,7 +38,7 @@ app.use((req, res) =>{
 // Iniciando o servidor
 const server = app.listen(PORT, () =>{
     console.log(`Servidor ouvindo/rodando na porta ${PORT}`);
-})
+});
 
 process.on('SIGINT', () =>{
     server.close();
